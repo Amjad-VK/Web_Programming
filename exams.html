@@ -1,0 +1,165 @@
+﻿<html>
+    <head>
+        <title></title>
+           <script>
+        function validation()
+        {
+        var ans=['b','d'];
+        var a=[];
+        var mark=0,quest=2,i=0;
+        
+        var name=document.getElementById("nam").value;
+        var roll=document.getElementById("roll").value;
+
+       if ( document.getElementById('v').checked ) 
+       {
+             mark=mark+2;
+       }
+       if( document.getElementById('w').checked)
+      {
+            mark=mark+2;
+      }
+      if ( document.getElementById('x').checked ) 
+       {
+             mark=mark+2;
+       }
+       if( document.getElementById('y').checked)
+      {
+            mark=mark+2;
+      }
+      if ( document.getElementById('z').checked ) 
+       {
+             mark=mark+2;
+       }
+       var remark;
+       if(mark==10)
+           remark="outstanding...."
+        if(mark==8)
+           remark="very good...."
+        if(mark==6)
+           remark="good...."
+        if(mark<=4)
+           remark="need to improve...."
+
+       
+     //alert("YOUR mark is :"+mark)
+     alert("SCORE CARD \n----------\nName :"+name+"\nRoll no :"+roll+"\nMaximum mark : 10\nYOUR mark :"+mark+"\n_______________\nRemark :"+remark)
+     return true;
+     }
+    </script>
+    <style rel="stylesheet">
+        #q{
+            background-color: aquamarine;
+        }
+   .contin{
+        background-color:#ccf2ff;
+        border-radius:15px;
+        
+        }
+    .q{
+        background-color:#00bfff;
+border-bottom-style: solid;
+border-bottom-width:10px;
+  border-bottom-color: #99e6ff;
+border-radius:15px 15px 0px 0px;
+padding:5px;
+
+        }
+body{
+margin-left:120px;
+margin-right:120px;
+background-color:#e4e4e7;
+}
+
+ input{
+  border-radius: 4px;
+  background-color: rgb(87, 166, 240);
+  border-color: rgba(255, 0, 0, 0);
+}
+input:hover{
+  background-color: #06D85F;
+}
+    </style>
+    </head>
+    <body>
+        <center>
+        <form name="exam" method="post" action="/db.php" onsubmit="return validation()">
+            <div id="info">
+<br>
+               <b>Name</b> &nbsp;&nbsp;&nbsp;<input type="text" id="nam" required><br> <br>
+            
+         
+            <b> Roll no</b> &nbsp;<input type="number" id="roll" required><br><br>
+            </center>
+        
+<div class="contin">
+<div class="q"><br>
+<b>1 : which tag used to add a js codes</b>(2 marks)
+</div><br>
+ 
+<input type="radio" value="a"  name="a">style tag<br><br>
+<input type="radio" value="b" id="v" name="a">script tag<br><br>
+<input type="radio" value="c"  name="a">code tag<br><br>
+<input type="radio" value="d"  name="a">p tag<br><br><br>
+</div>
+</div><br>
+           
+
+<div class="contin">
+<div class="q"><br>           
+<b>2 : use of anchor tag </b>(2 marks)
+</div><br>
+
+<input type="radio" value="a" name="b">add a heading<br><br>
+<input type="radio" value="b" name="b">add a paragraph<br><br>
+<input type="radio" value="c" name="b">add a frame<br><br>
+<input type="radio" value="d" name="b" id="w">add a link<br><br>
+ </div>
+</div><br>
+      
+
+<div class="contin">
+<div class="q"><br>
+<b>3 : HTML Tag for for showing an image </b>(2 marks)
+</div><br>
+
+<input type="radio" value="a"  name="c">picture tag<br><br>
+<input type="radio" value="b" id="x" name="c">img tag<br><br>
+<input type="radio" value="c"  name="c">image tag<br><br>
+<input type="radio" value="d"  name="c">all the above<br><br>
+</div>
+</div><br>
+   
+
+<div class="contin">
+<div class="q"><br> 
+<b>4 : css used for ? </b>(2 marks)
+</div><br>
+
+<input type="radio" value="a" name="d" id="y">add a style<br><br>
+<input type="radio" value="b" name="d">to add function<br><br>
+<input type="radio" value="c" name="d">to add network access<br><br>
+<input type="radio" value="d" name="d" id="z">to import images<br><br>
+</div>
+</div><br>
+
+
+<div class="contin">
+<div class="q"><br>
+<b>5 : Mainly HTML Used for</b>(2 marks)
+</div><br>
+
+<input type="radio" value="a"  name="e">devolep desktop app<br><br>
+<input type="radio" value="b" name="e"  id="z">devolep web pages<br><br>
+<input type="radio" value="c"  name="e">devolep android apps<br><br>
+<input type="radio" value="d"  name="e">for server backend programs<br><br>    
+</div>
+</div><br><br>
+  <center>
+<input type="submit" value="submit answers">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input type="reset" value="reset"><br></br><br><br>
+</center>
+    </form>
+    <p id="ans"></p>
+    </body>
+</html>

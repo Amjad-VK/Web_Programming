@@ -1,0 +1,28 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        <img src="tre.jpg" onmouseover="image()" id="img" onmouseout="imageBack()" width="200px"><br><br><br><br>
+        <h1 onmouseover="text()" id="txt" onmouseout="textBack()"> POINT MOUSE HERE</h1>
+        <script>
+            function image()
+            {
+                document.getElementById("img").src="tree.png"
+            }
+            function imageBack()
+            {
+                document.getElementById("img").src="tre.jpg"
+            }
+            function text()
+            {
+              document.getElementById("txt").innerHTML="NEW TEXT"
+            }
+            function textBack()
+            {
+              document.getElementById("txt").innerHTML=" POINT MOUSE HERE"
+            }
+
+        </script>
+    </body>
+</html>
