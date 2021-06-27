@@ -1,0 +1,34 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    
+    <title>Mouseovero</title>
+    <style>
+      #img2{
+        position: center;
+        right:0;
+        bottom:0;
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+      <h1 align="center">Buildings</h1>
+    <img id="img1" src="img1.jpg" title="Building1"/>
+    <img id="img2" src="img2.jpg" title="Bulding2"/>
+
+    <script>
+      var img1 = document.getElementById("img1"),
+          img2 = document.getElementById("img2");
+
+      img1.onmouseover = function(){
+        img2.style.display = "block";
+      }
+
+      img1.onmouseout = function(){
+        img2.style.display = "none";
+      }
+    </script>
+  </body>
+</html>
